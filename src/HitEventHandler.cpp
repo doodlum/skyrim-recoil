@@ -5,7 +5,7 @@
 RE::DestructibleObjectData* GetDestructibleForm(RE::TESBoundObject* a_form)
 {
 	using func_t = decltype(&GetDestructibleForm);
-	REL::Relocation<func_t> func{ REL::RelocationID(14055, 14152) };  // 1.5.97 14032ECE0
+	REL::Relocation<func_t> func{ REL::RelocationID(14055, 14152) };  // 1.5.97 1401832b0
 	return func(a_form);
 }
 
