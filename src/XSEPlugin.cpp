@@ -1,8 +1,8 @@
-#include "Events.h"
+#include "HitEventHandler.h"
 
 void Init()
 {
-	Events::Register();
+	HitEventHandler::Register();
 }
 
 void InitializeLog()

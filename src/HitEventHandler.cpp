@@ -1,11 +1,6 @@
 #pragma once
 
-#include "Events.h"
-
-void Events::Register()
-{
-	hitEventHandler::Register();
-}
+#include "HitEventHandler.h"
 
 RE::DestructibleObjectData* GetDestructibleForm(RE::TESBoundObject* a_form)
 {
@@ -30,7 +25,7 @@ bool HasVelocity(RE::TESObjectREFR* a_form)
 	return velocity.Length();
 }
 
-RE::BSEventNotifyControl hitEventHandler::ProcessEvent(const RE::TESHitEvent* a_event, RE::BSTEventSource<RE::TESHitEvent>*)
+RE::BSEventNotifyControl HitEventHandler::ProcessEvent(const RE::TESHitEvent* a_event, RE::BSTEventSource<RE::TESHitEvent>*)
 {
 	auto hitsource = RE::TESForm::LookupByID<RE::TESObjectWEAP>(a_event->source);
 	if (hitsource && hitsource->IsMelee()) {
